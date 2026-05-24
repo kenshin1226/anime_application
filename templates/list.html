@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+    <tr>
+        <th>作品名</th>
+        <th>放送時期</th>
+        <th>評価</th>
+        <th>評価コメント</th>
+        <th>ユーザー名</th>
+    </tr>
+    {% for anime in a_list %}
+    <tr>
+        <!-- もう一回for文をやる　5/10 -->
+         {% for i in range(5) %}
+        <td>{{anime[i+1]}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
