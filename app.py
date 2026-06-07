@@ -1,4 +1,4 @@
-from flask import Flask,render_template,session, request
+from flask import Flask,render_template,session, request,redirect,url_for
 import sqlite3
 
 app = Flask(__name__)
@@ -28,6 +28,6 @@ def input2():
       ,(title,season,star,comment,postuser))
       conn.commit()
       conn.close()
-      return ""
+      return  redirect(url_for("list"))
 if __name__ =="__main__":
     app.run(debug=True)
