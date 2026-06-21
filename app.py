@@ -29,5 +29,5 @@ def input2():
       conn.commit()
       conn.close()
       return  redirect(url_for("list"))
-if __name__ =="__main__":
-    app.run(debug=True)
+# if __name__ =="__main__":
+app.run(debug=True)
